@@ -1,6 +1,12 @@
-# Fluidd
+# Fluidd-Belt
 
-Fluidd is a free and open-source Klipper web interface for managing your 3d printer.
+Fluidd is a free and open-source Klipper web interface for managing your Conveyor Belt Style 3d printer.
+
+## Using this on a normal printer will VOID your warranty!
+
+This modified version will add the ability to change, view, and save the Y Axis offset for the belt printer, since Z Axis offset is not needed.
+
+
 
 ![Fluidd](/docs/assets/images/preview_sliced.png "Fluidd")
 
