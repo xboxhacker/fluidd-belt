@@ -29,9 +29,14 @@ const vitePluginInjectVersion = (): Plugin => {
   return {
     name: 'version',
     config: () => {
-      const git_hash = child_process
-        .execSync('git rev-parse --short HEAD')
-        .toString()
+      let git_hash = 'dev-build'
+      try {
+        git_hash = child_process
+          .execSync('git rev-parse --short HEAD')
+          .toString()
+      } catch (error) {
+        console.log('Git not available, using fallback hash:', git_hash)
+      }
 
       return {
         define: {
