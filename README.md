@@ -32,6 +32,9 @@ gcode:
 ```
 Upload the modified Fluidd files to your printer.
 
+<img width="917" height="303" alt="Screenshot 2025-11-02 17 24 06" src="https://github.com/user-attachments/assets/eb1382be-6ba2-456f-a5a4-2b75a2dbadbb" />
+
+
 
 ![Fluidd](/docs/assets/images/preview_sliced.png "Fluidd")
 
