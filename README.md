@@ -2,10 +2,35 @@
 
 Fluidd is a free and open-source Klipper web interface for managing your Conveyor Belt Style 3d printer.
 
-## Using this on a normal printer will VOID your warranty!
+## Using this on a normal printer will VOID your warranty! This is a HARD FORK!
 
 This modified version will add the ability to change, view, and save the Y Axis offset for the belt printer, since Z Axis offset is not needed.
 
+Add these to your printer.cfg file:
+
+``` Macros
+[save_variables]
+filename: ~/printer_data/config/variables.cfg
+
+[gcode_macro Y_OFFSET_SAVE_CONFIG]
+description: Save current Y offset and restart Klipper
+gcode:
+    {% set y_offset = printer.gcode_move.homing_origin[1] %}
+    SAVE_VARIABLE VARIABLE=saved_y_offset VALUE={y_offset}
+    { action_respond_info("Y offset %.3fmm will be saved. Klipper will restart..." % y_offset) }
+    SAVE_CONFIG
+
+[delayed_gcode RESTORE_Y_OFFSET]
+initial_duration: 2.0
+gcode:
+    {% set svv = printer.save_variables.variables %}
+    {% if 'saved_y_offset' in svv %}
+        {% set saved_offset = svv.saved_y_offset %}
+        SET_GCODE_OFFSET Y={saved_offset} MOVE=0
+        { action_respond_info("Restored Y offset: %.3fmm" % saved_offset) }
+    {% endif %}
+```
+Upload the modified Fluidd files to your printer.
 
 
 ![Fluidd](/docs/assets/images/preview_sliced.png "Fluidd")
