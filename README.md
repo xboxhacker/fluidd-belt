@@ -34,7 +34,7 @@ Upload the modified Fluidd files to your printer.
 
 <img width="917" height="303" alt="Screenshot 2025-11-02 17 24 06" src="https://github.com/user-attachments/assets/eb1382be-6ba2-456f-a5a4-2b75a2dbadbb" />
 
-You can find the latest release of the Fulidd-Belt here: [Fulidd-Belt](https://github.com/xboxhacker/fluidd-belt/releases/tag/v1.34.4_belt)
+You can find the latest release of the Fluidd-Belt here: [Fluidd-Belt](https://github.com/xboxhacker/fluidd-belt/releases/tag/v1.34.4_belt)
 
 ---
 
