@@ -36,6 +36,7 @@ Upload the modified Fluidd files to your printer.
 
 You can find the latest release of the Fluidd-Belt here: [Fluidd-Belt](https://github.com/xboxhacker/fluidd-belt/releases/tag/v1.34.4_belt)
 
+# !!Updating Fluidd from the main-core branch will break these Y Offset modifications!!
 ---
 
 ![Fluidd](/docs/assets/images/preview_sliced.png "Fluidd")
