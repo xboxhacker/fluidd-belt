@@ -30,6 +30,15 @@ gcode:
         { action_respond_info("Restored Y offset: %.3fmm" % saved_offset) }
     {% endif %}
 ```
+
+Make this file in your Config folder:
+
+```config
+variables.cfg
+```
+***IMPORTANT:*** You **MUST** home **BEFORE** adjusting the offset or saving the offset!
+
+
 Upload the modified Fluidd files to your printer.
 
 <img width="917" height="303" alt="Screenshot 2025-11-02 17 24 06" src="https://github.com/user-attachments/assets/eb1382be-6ba2-456f-a5a4-2b75a2dbadbb" />
